@@ -38,6 +38,7 @@ pipeline {
             }
         }
         stage('Build Image') {
+            checkout scm
             app = docker.build("PipelineBuildImage")
             
         }

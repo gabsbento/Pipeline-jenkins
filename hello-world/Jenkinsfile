@@ -1,6 +1,5 @@
 pipeline {
     agent any
-    def app
     stages {
         stage('Static Analysis') {
             steps {
@@ -38,9 +37,13 @@ pipeline {
             }
         }
         stage('Build Image') {
-            checkout scm
-            app = docker.build("PipelineBuildImage")
-            
+            steps {
+                echo 'Starting to build docker image'
+
+                script {
+                    def customImage = docker.build("PipelineImageJenkins")
+                }
+            }     
         }
     }
 }

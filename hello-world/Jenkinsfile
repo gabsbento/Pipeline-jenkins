@@ -38,7 +38,7 @@ pipeline {
         }
         stage('Build Image') {
             steps {
-                any = docker.build("PipelineBuildImage")
+                docker.build("PipelineBuildImage")
             }
         }
     }

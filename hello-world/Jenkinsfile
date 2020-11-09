@@ -36,5 +36,10 @@ pipeline {
                 echo 'Bento test' 
             }
         }
+        stage('Build Image') {
+            steps {
+                any = docker.build("PipelineBuildImage")
+            }
+        }
     }
 }

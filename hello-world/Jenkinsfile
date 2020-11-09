@@ -38,9 +38,8 @@ pipeline {
             }
         }
         stage('Build Image') {
-            steps {
-                app = docker.build("PipelineBuildImage")
-            }
+            app = docker.build("PipelineBuildImage")
+            
         }
     }
 }

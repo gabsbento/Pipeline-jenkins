@@ -38,7 +38,7 @@ pipeline {
         }
         stage('Build Image') {
             steps {
-                sh 'touch test.txt'
+                sh 'touch /home/test1234.txt'
             }     
         }
     }

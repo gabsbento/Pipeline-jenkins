@@ -1,3 +1,3 @@
 FROM nginx:alpine
 
-RUN touch /name.json
+RUN touch /name_teste.json
